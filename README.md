@@ -2,6 +2,8 @@
 
 다운로드 링크<br/>
 <a href="https://drive.google.com/file/d/1kGN6Zzvg5O9z5hiQ7jU7na9lWLLjxOVL/view?usp=sharing">다운로드</a>
+<br/>
+이클립스 환경에서 실행시키시면 됩니다.
 
 크롤링, ajax, json, jsp 활용 연습했던 프로젝트입니다.<br/>
 멜론, 지니, 벅스, 플로, 바이브(일간)의 실시간 차트를 보아서 한번에 보여주는 사이트를 기획했고,<br/>
