@@ -57,8 +57,8 @@ var labels = [<c:forEach items="${ time }" var="tim">"${ tim }",</c:forEach>];
 		data : {
 			labels : labels,
 			datasets : [ {
-				data :  [null,null,null,null,null,null,null,null,null,null,null,null,null,null,<c:forEach begin="0" end="6" items="${ graphGenie }" var="graph" varStatus="i"><c:out value="${ graph.notIn }" />,</c:forEach>] ,
-				label : '<c:out value="${weekGenie.get(0)}"/>',				
+				data :  [<c:forEach begin="0" end="6" items="${ graphGenie }" var="graph" varStatus="i"><c:out value="${ graph.notIn }" />,</c:forEach>] ,
+				label : '<c:out value="${weekGenie.get(2)}"/>',				
 				borderColor : "#3e95cd",
 				fill : false
 			}, {
@@ -67,8 +67,8 @@ var labels = [<c:forEach items="${ time }" var="tim">"${ tim }",</c:forEach>];
 				borderColor : "#8e5ea2",
 				fill : false
 			}, {
-				data :  [<c:forEach begin="14" end="20" items="${ graphGenie }" var="graph" varStatus="i"><c:out value="${ graph.notIn }" />,</c:forEach>] ,
-				label : '<c:out value="${weekGenie.get(2)}"/>',
+				data :  [null,null,null,null,null,null,null,null,null,null,null,null,null,null,<c:forEach begin="14" end="20" items="${ graphGenie }" var="graph" varStatus="i"><c:out value="${ graph.notIn }" />,</c:forEach>] ,
+				label : '<c:out value="${weekGenie.get(0)}"/>',
 				borderColor : "#3cba9f",
 				fill : false
 			}]

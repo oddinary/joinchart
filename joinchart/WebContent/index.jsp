@@ -1,4 +1,3 @@
-<%@page import="test.crawling.Paging"%>
 <%@page import="test.crawling.Vibej"%>
 <%@page import="test.crawling.Floj"%>
 <%@page import="org.openqa.selenium.WebElement"%>
@@ -35,7 +34,7 @@
 <body>
 	<c:set var="num" value="1" />
 	<%
-	List<Music> melonlist = Melon.crawlingMelon();
+		List<Music> melonlist = Melon.crawlingMelon();
 	request.setAttribute("melonlist", melonlist);
 	List<Music> genielist = Genie.crawlingGenie();
 	request.setAttribute("genielist", genielist);
@@ -104,20 +103,21 @@
 						<td>
 							<div class="title">
 								<p class="overflow">
-									<a href="./chartmelon.jsp?title=${ melon.title }"> <c:out
-											value="${melon.title}" />
+									<a href="./chartmelon.jsp?title=${ melon.title }" title="${ melon.title }"> <c:out
+											value="${melon.title}" /> 
+
 									</a>
 								</p>
-								<p class="album overflow">
+								<p class="album overflow" title="${ melon.album }">
 									<c:out value="${ melon.album }" />
 								</p>
 							</div>
 						</td>
 						<td class="artist">
 							<p class="overflow">
-								<a href="https://www.google.com/search?q=${ melon.artist }">
-								<c:out value="${ melon.artist }" />
-							</a>
+								<a href="https://www.google.com/search?q=${ melon.artist }" title="${ melon.album }">
+									<c:out value="${ melon.artist }" />
+								</a>
 							</p>
 						</td>
 					</tr>
@@ -183,20 +183,20 @@
 						<td>
 							<div class="title">
 								<p class="overflow">
-									<a href="./chartgenie.jsp?title=${ genie.title }"> <c:out
+									<a href="./chartgenie.jsp?title=${ genie.title }" title="${ genie.title }"> <c:out
 											value="${ genie.title }" />
 									</a>
 								</p>
-								<p class="album overflow">
+								<p class="album overflow" title="${ genie.album }">
 									<c:out value="${ genie.album }" />
 								</p>
 							</div>
 						</td>
 						<td class="artist">
 							<p class="overflow">
-								<a href="https://www.google.com/search?q=${ genie.artist }">
-								<c:out value="${ genie.artist }" />
-							</a>
+								<a href="https://www.google.com/search?q=${ genie.artist }" title="${ genie.artist }">
+									<c:out value="${ genie.artist }" />
+								</a>
 							</p>
 						</td>
 					</tr>
@@ -263,20 +263,20 @@
 							<div class="title">
 								<p class="overflow">
 									<a
-										href="https://www.youtube.com/results?search_query=${ bugs.title }+${ bugs.artist }+official">
+										href="https://www.youtube.com/results?search_query=${ bugs.title }+${ bugs.artist }+official" title="${ bugs.title }">
 										<c:out value="${ bugs.title }" />
 									</a>
 								</p>
-								<p class="album overflow">
+								<p class="album overflow" title="${ bugs.album }">
 									<c:out value="${ bugs.album }" />
 								</p>
 							</div>
 						</td>
 						<td class="artist">
 							<p class="overflow">
-							<a href="https://www.google.com/search?q=${ bugs.artist }">
-								<c:out value="${ bugs.artist }" />
-							</a>
+								<a href="https://www.google.com/search?q=${ bugs.artist }" title="${ bugs.artist }">
+									<c:out value="${ bugs.artist }" />
+								</a>
 							</p>
 						</td>
 					</tr>
@@ -343,20 +343,20 @@
 							<div class="title">
 								<p class="overflow">
 									<a
-										href="https://www.youtube.com/results?search_query=${ flo.title }+${ flo.artist }+official">
-										<c:out value="${ flo.title }" />
+										href="https://www.youtube.com/results?search_query=${ flo.title }+${ flo.artist }+official"
+										title="${ flo.title }"> <c:out value="${ flo.title }" />
 									</a>
 								</p>
-								<p class="album overflow">
+								<p class="album overflow" title="${ flo.album }">
 									<c:out value="${ flo.album }" />
 								</p>
 							</div>
 						</td>
 						<td class="artist">
 							<p class="overflow">
-								<a href="https://www.google.com/search?q=${ flo.artist }">
-								<c:out value="${ flo.artist }" />
-							</a>
+								<a href="https://www.google.com/search?q=${ flo.artist }"
+									title="${flo.artist}"> <c:out value="${ flo.artist }" />
+								</a>
 							</p>
 						</td>
 					</tr>
@@ -423,20 +423,20 @@
 							<div class="title">
 								<p class="overflow">
 									<a
-										href="https://www.youtube.com/results?search_query=${ vibe.title }+${ vibe.artist }+official">
-										<c:out value="${ vibe.title }" />
+										href="https://www.youtube.com/results?search_query=${ vibe.title }+${ vibe.artist }+official"
+										title="${ vibe.title }"> <c:out value="${ vibe.title }" />
 									</a>
 								</p>
-								<p class="album overflow">
+								<p class="album overflow" title="${ vibe.album }">
 									<c:out value="${ vibe.album }" />
 								</p>
 							</div>
 						</td>
 						<td class="artist">
 							<p class="overflow">
-								<a href="https://www.google.com/search?q=${ vibe.artist }">
-								<c:out value="${ vibe.artist }" />
-							</a>
+								<a href="https://www.google.com/search?q=${ vibe.artist }"
+									title="${ vibe.artist }"> <c:out value="${ vibe.artist }" />
+								</a>
 							</p>
 						</td>
 					</tr>

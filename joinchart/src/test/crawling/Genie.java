@@ -20,6 +20,7 @@ public class Genie {
 	static DateTimeFormatter weekformatter = DateTimeFormatter.ofPattern("YYYYMMdd");
 	static DateTimeFormatter monthformatter = DateTimeFormatter.ofPattern("YYYYMM");
 	static DateTimeFormatter dateformatter = DateTimeFormatter.ofPattern("dd");
+	static DateTimeFormatter timeformatter = DateTimeFormatter.ofPattern("HH");
 
 	static String week = now.format(weekformatter);
 	static String week2 = now.format(weekformatter);
@@ -116,7 +117,7 @@ public class Genie {
 		for (int i = 0; i < 3; i++) {
 			week = now.minusDays(7 * i + 6).format(weekformatter);
 			week2 = now.minusDays(7 * i).format(weekformatter);
-			dateList.add(week2 + "~" + week);
+			dateList.add(week + "~" + week2);
 		}
 		return dateList;
 	}
@@ -127,15 +128,23 @@ public class Genie {
 		List<List<String>> genieGraph = new ArrayList<>();
 		List<Graph> graphList = new ArrayList<Graph>();
 
+		int k = 20;
 		for (int i = 0; i <= 20; i++) {
 			List<String> genieDateRank = new ArrayList<>();
 			String dayCount;
 
-			dayCount = now.minusDays(i).format(weekformatter);
-//			genieHourList.add(dayCount);
+			dayCount = now.minusDays(k).format(weekformatter);
+			k--;
 
-			String url = "https://www.genie.co.kr/chart/top200?ditc=D&ymd=" + dayCount + "&hh=09&rtm=N&pg=1";
-			String url2 = "https://www.genie.co.kr/chart/top200?ditc=D&ymd=" + dayCount + "&hh=09&rtm=N&pg=2";
+			String timeCount = now.format(timeformatter);
+			
+			if (Integer.valueOf(timeCount) < 10) {
+				timeCount = "0"+ timeCount;
+			}
+			System.out.println(timeCount);
+			
+			String url = "https://www.genie.co.kr/chart/top200?ditc=D&ymd=" + dayCount + "&hh=" + 14 + "&rtm=N&pg=1";
+			String url2 = "https://www.genie.co.kr/chart/top200?ditc=D&ymd=" + dayCount + "&hh=" + timeCount + "&rtm=N&pg=2";
 			Document doc = Jsoup.connect(url).get();
 			Document doc2 = Jsoup.connect(url2).get();
 			Elements title = doc.select("table.list-wrap").select("a.title");
