@@ -1,7 +1,7 @@
 # joinchart
 
-다운로드 링크<br/>
-<a href="https://drive.google.com/file/d/1hWhnuxku77P9cf7HF0FA_d42YGRfeLS1/view?usp=sharing">다운로드</a>
+
+<a href="https://drive.google.com/file/d/1hWhnuxku77P9cf7HF0FA_d42YGRfeLS1/view?usp=sharing">다운로드 링크</a>
 <br/>
 해당 파일을 다운 받아 압축을 풀어서 이클립스EE 또는 톰캣을 지원하는 자바 환경에서 실행시키시면 됩니다.
 
