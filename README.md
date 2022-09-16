@@ -1,9 +1,9 @@
 # joinchart
 
 다운로드 링크<br/>
-<a href="https://drive.google.com/file/d/1kGN6Zzvg5O9z5hiQ7jU7na9lWLLjxOVL/view?usp=sharing">다운로드</a>
+<a href="https://drive.google.com/file/d/1hWhnuxku77P9cf7HF0FA_d42YGRfeLS1/view?usp=sharing">다운로드</a>
 <br/>
-해당 파일을 다운 받아 압축을 풀어서 이클립스 환경에서 실행시키시면 됩니다.
+해당 파일을 다운 받아 압축을 풀어서 이클립스EE 환경에서 실행시키시면 됩니다.
 
 ● JSP, Html, Css, JavaScript를 활용한 음원순위 종합 사이트 구현<br/>
 - K-pop의 수요 증가와 함께 성장하는 한국의 음원사이트들의 순위를 모아서 보여줌으로써 한국에서 현재 유행하는 노래들을 한눈에 파악할 수 있도록 하고 싶었음.<br/>
