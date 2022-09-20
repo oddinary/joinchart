@@ -1,10 +1,22 @@
 # joinchart
+● 실행 환경
+- java 8 ver
+- apache tomcat 9.0 ver
 
-
-<a href="https://drive.google.com/file/d/1hWhnuxku77P9cf7HF0FA_d42YGRfeLS1/view?usp=sharing">다운로드 링크</a>
-<br/><br/>
-해당 파일을 다운 받아 압축을 풀어서 이클립스EE 또는 톰캣을 지원하는 자바 환경에서 실행시키시면 됩니다.
-
+● 다운로드 방법 <br/>
+1. 우측의 release메뉴의 Latest태그가 붙어있는 링크를 클릭합니다.<br/>
+2. 업데이트 내용들과 설명을 잘 읽어 보신 후 joinchart.war 파일을 톰캣 경로의 webapps 폴더 안에 다운 받아주시면 됩니다.<br/>
+<br/>
+● 실행 방법 <br/>
+- 처음 실행할 경우 or 새로운 버전을 설치했을 경우
+1. 톰캣 경로의 webapps 폴더에 joinchart.war가 잘 들어가 있는지 확인합니다.<br/>
+2. 톰캣 경로의 bin 폴더에서 startup.bat을 실행하면 톰캣이 자동으로 webapps안에 joinchart 폴더를 생성해 줍니다.<br/>
+3. startup.bat을 종료하지 않은 상태에서 브라우저 주소창에 http://localhost:8080/joinchart/index.jsp 를 입력한후 이동합니다.<br/>
+<br/>
+- 처음 실행이 아닐 경우
+1. 톰캣 경로의 bin 폴더에서 startup.bat을 실행합니다.<br/>
+2. startup.bat을 종료하지 않은 상태에서 브라우저 주소창에 http://localhost:8080/joinchart/index.jsp 를 입력한후 이동합니다.<br/>
+<br/>
 ● JSP, Html, Css, JavaScript를 활용한 음원순위 종합 사이트 구현<br/>
 - K-pop의 수요 증가와 함께 성장하는 한국의 음원사이트들의 순위를 모아서 보여줌으로써 한국에서 현재 유행하는 노래들을 한눈에 파악할 수 있도록 하고 싶었음.<br/>
 <br/>
