@@ -8,12 +8,12 @@
 2. 업데이트 내용들과 설명을 잘 읽어 보신 후 joinchart.war 파일을 톰캣 경로의 webapps 폴더 안에 다운 받아주시면 됩니다.<br/>
 <br/>
 ● 실행 방법 <br/>
-- 처음 실행할 경우 or 새로운 버전을 설치했을 경우
+- 처음 실행할 경우 or 새로운 버전을 설치했을 경우<br/>
 1. 톰캣 경로의 webapps 폴더에 joinchart.war가 잘 들어가 있는지 확인합니다.<br/>
 2. 톰캣 경로의 bin 폴더에서 startup.bat을 실행하면 톰캣이 자동으로 webapps안에 joinchart 폴더를 생성해 줍니다.<br/>
 3. startup.bat을 종료하지 않은 상태에서 브라우저 주소창에 http://localhost:8080/joinchart/index.jsp 를 입력한후 이동합니다.<br/>
 <br/>
-- 처음 실행이 아닐 경우
+- 처음 실행이 아닐 경우<br/>
 1. 톰캣 경로의 bin 폴더에서 startup.bat을 실행합니다.<br/>
 2. startup.bat을 종료하지 않은 상태에서 브라우저 주소창에 http://localhost:8080/joinchart/index.jsp 를 입력한후 이동합니다.<br/>
 <br/>
