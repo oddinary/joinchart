@@ -24,7 +24,7 @@ public class Bugs{
 		Elements album = doc.select("tbody>tr>td.left>a.album");
 		Elements albumArt = doc.select("tbody>tr>td>a>img");
 
-		for (int i = 0; i < 100; i++) {
+		for (int i = 0; i < artist.size(); i++) {
 			int rank = i + 1;
 			String title_temp = title.get(i).text();
 			String updown_temp = null;
@@ -50,7 +50,12 @@ public class Bugs{
 				break;
 			}
 			};
-			String artist_temp = artist.get(i).text();
+			String artist_temp = "-";
+			if (doc.select("tbody>tr>td.left>p.artist").get(i).select("span").hasClass("dim")) {
+				artist_temp = "벅스에서 서비스 하지 않음";
+			} else {
+				artist_temp = artist.get(i).text();
+			}
 			String album_temp = album.get(i).text();
 			String albumArt_temp = albumArt.get(i).attr("src");
 

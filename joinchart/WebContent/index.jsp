@@ -115,7 +115,7 @@
 						</td>
 						<td class="artist">
 							<p class="overflow">
-								<a href="https://www.google.com/search?q=${ melon.artist }" title="${ melon.album }">
+								<a href="https://www.google.com/search?q=${ melon.artist }" title="${ melon.artist }">
 									<c:out value="${ melon.artist }" />
 								</a>
 							</p>

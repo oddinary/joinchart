@@ -37,7 +37,7 @@ public class Vibej {
 		
 		InputStream responseStream = httpConn.getResponseCode() / 100 == 2 ? httpConn.getInputStream()
 				: httpConn.getErrorStream();
-		Scanner s = new Scanner(responseStream).useDelimiter("\\A");
+		Scanner s = new Scanner(responseStream, "UTF-8").useDelimiter("\\A");
 		String response = s.hasNext() ? s.next() : "";
 		
 		ObjectMapper mapper = new ObjectMapper();
@@ -94,7 +94,7 @@ public class Vibej {
 		
 		InputStream responseStream = httpConn.getResponseCode() / 100 == 2 ? httpConn.getInputStream()
 				: httpConn.getErrorStream();
-		Scanner s = new Scanner(responseStream).useDelimiter("\\A");
+		Scanner s = new Scanner(responseStream, "UTF-8").useDelimiter("\\A");
 		String response = s.hasNext() ? s.next() : "";
 		
 		ObjectMapper mapper = new ObjectMapper();

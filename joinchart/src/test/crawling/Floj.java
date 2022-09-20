@@ -42,7 +42,7 @@ public class Floj {
 		httpConn.setRequestMethod("GET");
 
 		httpConn.setRequestProperty("authority", "www.music-flo.com");
-		httpConn.setRequestProperty("accept", "application/json, text/plain, */*");
+		httpConn.setRequestProperty("accept", "application/json, text/plain; charset=utf-8");
 		httpConn.setRequestProperty("accept-language", "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7");
 		httpConn.setRequestProperty("cookie",
 				"x-gm-device-id=V04-Y-6FF368136FBEDF621D4515CD69503A8A; initPopup_1018=false; x-gm-app-name=FLO_WEB; x-gm-app-version=6.7.0; x-gm-os-type=WEB; x-gm-os-version=10; osType=PC_WEB");
@@ -65,7 +65,7 @@ public class Floj {
 
 		InputStream responseStream = httpConn.getResponseCode() / 100 == 2 ? httpConn.getInputStream()
 				: httpConn.getErrorStream();
-		Scanner s = new Scanner(responseStream).useDelimiter("\\A");
+		Scanner s = new Scanner(responseStream, "UTF-8").useDelimiter("\\A");
 		String response = s.hasNext() ? s.next() : "";
 
 		ObjectMapper mapper = new ObjectMapper();
@@ -148,7 +148,7 @@ public class Floj {
 
 		InputStream responseStream = httpConn.getResponseCode() / 100 == 2 ? httpConn.getInputStream()
 				: httpConn.getErrorStream();
-		Scanner s = new Scanner(responseStream).useDelimiter("\\A");
+		Scanner s = new Scanner(responseStream, "UTF-8").useDelimiter("\\A");
 		String response = s.hasNext() ? s.next() : "";
 
 		ObjectMapper mapper = new ObjectMapper();
